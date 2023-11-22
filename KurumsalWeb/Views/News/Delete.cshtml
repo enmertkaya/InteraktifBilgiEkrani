@@ -1,0 +1,65 @@
+﻿@model KurumsalWeb.Models.Model.New
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h3>Haberi Silmek İstediğinize Emin Misiniz?</h3>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TvID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a href="/News/Index" class="btn btn-warning">Geri Dön</a>
+        </div>
+    }
+</div>

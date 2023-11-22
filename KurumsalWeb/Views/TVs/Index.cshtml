@@ -1,0 +1,49 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.Department>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>TV Yönetim Sayfası</h2>
+
+<p>
+    <a class="btn btn-success" href="/Departments/Create/">Yeni Tv Ekle</a>
+
+</p>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            TV Numarası
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Faculty.FacultyName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentName)
+        </th>
+        <th>
+            İşlemler
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FacultyID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faculty.FacultyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentName)
+            </td>
+            <td>
+                @Html.ActionLink("Sil", "Delete", new { id = item.FacultyID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

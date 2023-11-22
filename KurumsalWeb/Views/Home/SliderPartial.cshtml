@@ -1,0 +1,28 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.New>
+@{ Layout = null; }
+
+<div class="carousel-inner" role="listbox">
+    @foreach (var item in Model.Where(x => x.TvID < 3))
+    {
+        <div class="carousel-item active" style="background-image: url(@item.NewPath);">
+            <div class="carousel-container">
+                <div class="carousel-content">
+                    <style>
+                        .description-container2 {
+                            position: absolute;
+                            top: 500px;
+                            left: 100px;
+                            color: white;
+                            max-width: 300px; /* Metnin en fazla bu genişlikte görüntülenmesini sağlar */
+                            overflow-wrap: break-word;
+                            /* Diğer stil özellikleri */
+                        }
+                    </style>
+
+                    <!--<h2 class="animate__animated animate__fadeInDown"><span></span>--> @*Restaurant*@<!--</h2>-->
+                    <div class="description-container2"><a>@item.NewDescription<i style="width:90%"></i></a></div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

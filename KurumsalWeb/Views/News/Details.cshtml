@@ -1,0 +1,59 @@
+﻿@model KurumsalWeb.Models.Model.New
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>New</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TvID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NewID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

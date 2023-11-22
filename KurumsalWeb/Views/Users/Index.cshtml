@@ -1,0 +1,52 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.User>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kullanıcı İşlemleri</h2>
+
+<a class="btn btn-success" href="/Users/Create/">Yeni Kullanıcı Ekle</a>
+
+<table class="table table-bordered table-striped" ">
+    <thead>
+        <tr>
+            
+            <th scope="col">İsim</th>
+            <th scope="col">Soyisim</th>
+            <th scope="col">Şifre</th>
+            <th scope="col">Mail</th>
+            <th scope="col">Fakülte İsmi</th>
+            
+            <th scope="col">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>@item.UserName</td>
+                <td>@item.UserSurname</td>
+                <td>@item.UserPassword</td>
+                <td>@item.UserMail</td>
+                <td>@item.Faculty.FacultyName</td>
+                
+                <td>
+                   
+                    @Html.ActionLink("Sil", "Delete", new { id = item.UserID }, new { @class = "btn btn-danger" })
+                </td>
+               
+
+                
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+

@@ -1,0 +1,42 @@
+﻿@model KurumsalWeb.Models.Model.Department
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Bölüm Düzenle</h2>
+<div class="form">
+    @*<form class="form-validate form-horizontal" id="feedback_form" method="post" action="/Departments/Edit/" enctype="multipart/form-data">*@
+    @using (Html.BeginForm("Edit", "Departments", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken();
+
+        <div class="form-group ">
+            <label for="cname" class="control-label col-lg-2">Bölüm İsmi <span class="">*</span></label>
+            <div class="col-lg-10">
+                <input class="form-control" id="DepartmentName" name="DepartmentName" minlength="5" type="text" required value="@Model.DepartmentName" />
+            </div>
+        </div>
+        <div class="form-group ">
+            <label for="cname" class="control-label col-lg-2">Tarih <span class="">*</span></label>
+            <div class="col-lg-10">
+                <input class="form-control" id="DepartmentCreationDate" name="DepartmentCreationDate" minlength="5" type="text" required value="@Model.DepartmentCreationDate" />
+            </div>
+        </div>
+        <div class="form-group ">
+            <label for="cname" class="control-label col-lg-2">Fakülte İsmi <span class="required">*</span></label>
+            <div class="col-lg-10">
+                @Html.DropDownList("FacultyID", null, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+                <button class="btn btn-dark" type="submit">Ekle</button>
+                <button class="btn btn-warning" type="button"><a href="/Departments/Index">İptal</a></button>
+            </div>
+        </div>
+    }
+
+
+</div>

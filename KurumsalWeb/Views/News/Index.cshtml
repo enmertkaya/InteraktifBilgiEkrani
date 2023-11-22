@@ -1,0 +1,43 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.New>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Haber İşlemleri</h2>
+
+<a class="btn btn-success" href="/News/Create/">Yeni Haber Ekle</a>
+
+<table class="table table-bordered table-striped" ">
+    <thead>
+        <tr>
+            <th scope="col">TV Numarası</th>
+            <th scope="col">Haber Başlık</th>
+            <th scope="col">Haber Foto</th>
+            <th scope="col">Haber Açıklama</th>
+            <th scope="col">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.TvID</th>
+                <td>@item.NewName</td>
+                <td>
+                    <img src="@item.NewPath" width="150" height="50"/>
+                </td>
+                <td>@item.NewDescription</td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.NewID }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.NewID }, new { @class = "btn btn-danger" })
+                </td>
+                @*<td><a href="/News/Edit/@item.NewID" style="background-color: blue; color: white; padding: 10px 20px; font-size: 16px;">Güncelle</a> <a href="/News/Delete/@item.NewID" style="background-color: red; color: white; padding: 10px 20px; font-size: 16px;">Sil</a></td>*@
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+

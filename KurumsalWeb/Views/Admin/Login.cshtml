@@ -1,0 +1,141 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>İnteraktif Bilgi Ekranı Giriş Sayfası</title>
+    <!-- Favicons -->
+    <link href="/Content/AdminLayout/assets/img/favicon.png" rel="icon">
+    <link href="/Content/AdminLayout/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <style>
+        body {
+            background-image: url("/Content/AdminLayout/assets/img/arkaplan.jpg");
+            background-size: cover;
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="/Content/AdminLayout/https://fonts.gstatic.com" rel="preconnect">
+    <link href="/Content/AdminLayout/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/Content/AdminLayout/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/AdminLayout/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Content/AdminLayout/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/Content/AdminLayout/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="/Content/AdminLayout/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="/Content/AdminLayout/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/Content/AdminLayout/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/Content/AdminLayout/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: NiceAdmin
+    * Updated: Mar 09 2023 with Bootstrap v5.2.3
+    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body style="background-image: url('/Content/AdminLayout/assets/img/arkaplan.jpg'); background-size: cover;">
+    <div>
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4" ac>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                        <div class="d-flex justify-content-center py-4">
+                            <a href="index.html" class="logo d-flex align-items-center w-auto">
+                                <img src="~/Content/AdminLayout/assets/img/baslog.jpg" alt="">
+                                <span class="d-none d-lg-block" style="color: white;">Giriş Sayfası</span>
+
+                            </a>
+                        </div><!-- End Logo -->
+
+                        <div class="card mb-3">
+
+                            <div class="card-body">
+
+                                <div class="pt-4 pb-2">
+                                    <h5 class="card-title text-center pb-0 fs-4">Profilinize Giriş Yapınız</h5>
+                                    <p class="text-center small">Kullanıcı mail adresinizi ve şifrenizi giriniz</p>
+                                </div>
+
+                                <form style="background-color: red #dc3545;" class="row g-3 needs-validation" action="/Admin/Login" method="post">
+
+                                    @if (!string.IsNullOrEmpty(ViewBag.Uyari))
+                                    {
+                                        <p class="alert alert-danger" style="background-color: ;">@ViewBag.Uyari</p>
+                                    }
+
+                                    <div class="col-12">
+                                        <label for="yourUsername" class="form-label">Mail Adresi</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend"></span>
+                                            <input type="email" name="UserMail" placeholder="E posta" class="form-control" id="yourUsername" required>
+                                            <div class="invalid-feedback">Lütfen kullanıcı mail adresinizi giriniz!</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="yourPassword" class="form-label">Şifre</label>
+                                        <input type="password" name="UserPassword" class="form-control" placeholder="Şifre" id="yourPassword" required>
+                                        <div class="invalid-feedback">Lütfen kullanıcı sifrenizi giriniz!</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        @*<div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                                            </div>*@
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-dark w-100" type="submit">Giriş Yap </button>
+
+
+
+
+                                        <a href="/Admin/ForgotMyPassword" class="btn btn-danger w-100" type="submit">Şifremi Unuttum </a>
+                                    </div>
+
+
+                                    @*<div class="col-12">
+                                            <p class="small mb-0">Don't have account? <a href="/Content/AdminLayout/pages-register.html">Create an account</a></p>
+                                        </div>*@
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <!--<div class="credits">-->
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+                        <!--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        </div>-->
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script src="/Content/AdminLayout/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="/Content/AdminLayout/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Content/AdminLayout/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="/Content/AdminLayout/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="/Content/AdminLayout/assets/vendor/quill/quill.min.js"></script>
+    <script src="/Content/AdminLayout/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="/Content/AdminLayout/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="/Content/AdminLayout/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/Content/AdminLayout/assets/js/main.js"></script>
+</body>
+</html>

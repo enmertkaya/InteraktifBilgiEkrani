@@ -1,0 +1,41 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.Department>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Bölüm İşlemleri</h2>
+
+<a class="btn btn-success" href="/Departments/Create/">Yeni Bölüm Ekle</a>
+
+<table class="table table-bordered table-striped"">
+    <thead>
+        <tr>
+            
+            <th scope="col">Bölüm İsmi</th>
+            <th scope="col">Tarih</th>
+            <th scope="col">Fakülte İsmi</th>
+            <th scope="col">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>@item.DepartmentName</td>
+                <td>@item.DepartmentCreationDate</td>
+                <td>@item.Faculty.FacultyName</td>
+                @*<td><a href="/Departments/Edit/@item.DepartmentID" style="background-color: blue; color: white; padding: 10px 20px; font-size: 16px;">Güncelle</a></td>*@
+            <td>
+                @Html.ActionLink("Düzenle", "Edit", new { id = item.DepartmentID }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.DepartmentID }, new { @class = "btn btn-danger" })
+            </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+

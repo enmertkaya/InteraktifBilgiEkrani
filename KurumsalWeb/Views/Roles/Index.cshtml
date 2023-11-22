@@ -1,0 +1,46 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.Role>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Uygulama içerisinde kullanılan roller</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleShortName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleDescription)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleShortName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleDescription)
+        </td>
+        
+    </tr>
+}
+
+</table>
