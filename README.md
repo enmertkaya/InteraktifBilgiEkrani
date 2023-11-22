@@ -44,7 +44,7 @@ anlık tahliye ve bilgilendirme aracı olarak da kullanılabilir.
 ![](images/1.png)
 ![](images/vt.png)
 ![](images/sifresil.png)
-![](images/5.png)
+
 <h2> 🛠 &nbsp;Kullanılan Teknolojiler</h2>
 
 <img alt="GIF" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
