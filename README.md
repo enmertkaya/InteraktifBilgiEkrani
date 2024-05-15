@@ -1,10 +1,9 @@
 ![](images/intekran.png)
 
-Bu projede, genel olarak fakültemizin belirli yerlerine konumlandırılmış ekranlarda
-öğretim elemanları, öğrenciler, çalışan ve ziyaretçiler için güncel, hızlı ve interaktif bir
-şekilde bilgi akış ekranı tasarlanmıştır. Anlık ve hızlı bilgi akışının yanında oryantasyon
-oyunları, etkinlik haberleri, özel gün kutlamaları, doğal afet ve acil durumlar anında
-anlık tahliye ve bilgilendirme aracı olarak da kullanılabilir.
+Dekanımız Sn. Prof. Dr. Berna DENGİZ isteğiyle görevlendirilip yeni mühendislik binasının görsel ve teknolojik açıdan öne çıkmasını sağlayacak kurumsal bir projeyi hayata geçirdik.
+Veri tabanı, alt yapı ve bulut çözümlerden sorumlu olduğum bu projede üniversite içerisinde konumlanmış televizyonları akıllı ekran haline getirdik.
+Kullanıcılar ekran üzerinden üniversite içi bilgilendirmeler, konferanslar ,özel gün ve etkinlik gibi kutlamaların yer aldığı ekranları her fakülte ve bölüme özgün şekilde ayrı ekranlarda görebilmektedir..
+5 farklı admin rolü içeren bu projede yetkinliklere göre özel alanlar tasarlanmıştır.Anlık bildirim, anlık mesajlaşma için kullanılabilen ekranlar üniversite içerisinde kullanılmaya başlanmıştır
 
 ### 1-Admin/Yönetici Rolü 
 
